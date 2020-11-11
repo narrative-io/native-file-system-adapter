@@ -1,29 +1,32 @@
 {
-  "name": "native-file-system-adapter",
-  "version": "0.2.0",
+  "name": "@narrative.io/native-file-system-adapter",
+  "version": "0.0.1-beta.0",
   "description": "Native File System API",
-  "main": "dist/es6.js",
-  "directories": {
-    "example": "example"
-  },
+	"private": false,
   "scripts": {
     "test": "exit 0",
-    "build": "rm -rf dist && rollup -c rollup.config.js"
+		"build": "rm -rf dist && rollup -c rollup.config.js",
+		"release:prod": "npm publish -access public",
+    "release:dev": "npm publish -access public --tag beta"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jimmywarting/native-file-system-adapter.git"
-  },
-  "publishConfig": {
-    "registry":"https://npm.pkg.github.com/@jimmywarting"
+    "url": "git+https://github.com/narrative-io/native-file-system-adapter.git"
   },
   "author": "Jimmy Wärting",
   "types": "types/es6.d.ts",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/jimmywarting/native-file-system-adapter/issues"
-  },
-  "homepage": "https://github.com/jimmywarting/native-file-system-adapter#readme",
+	"main": "dist/es6.js",
+  "unpkg": "distes6.js",
+  "cdn": "dist/es6.js",
+  "browser": "dist/es6.js",
+  "jsdelivr": "dist/es6.js",
+  "files": [
+    "src",
+    "dist",
+    "LICENSE",
+    "README.md"
+  ],
   "devDependencies": {
     "rollup": "^2.22.1",
     "rollup-plugin-terser": "^6.1.0",
